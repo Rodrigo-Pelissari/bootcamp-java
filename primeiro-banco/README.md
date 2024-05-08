@@ -1,18 +1,11 @@
-## Getting Started
+# Projeto - Transações Bancárias
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+O primeiro desafio do bootcamp consiste em montar um sistema bancário simples para, através de texto, criar uma nova conta bancária com os dados: Nome, sobrenome, agência e conta.
 
-## Folder Structure
+Para implementar o desafio e usar orientação a objetos, a ideia é aperfeiçoar esse sistema e colocar a opção de transações bancárias.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Histórico
+- Primeiro push
+  
+  Foram feitos vários sistemas, como depósito, saque, transferência e checagem de saldo. O intuito é que todas as transações possam ser feitas via texto enquanto o programa está rodando.
+**Dificuldade:** Para realizar as transações, é necessário que o usuário informe o número da sua conta, e através de um ArrayList ContaBanco, o sistema procura o número da conta equivalente para realizar a transação, porém o código não está conseguindo localizar a conta. (*Ainda não resolvido* - 08/05/2024)
