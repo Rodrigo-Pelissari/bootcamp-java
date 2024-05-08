@@ -12,7 +12,7 @@ public class Transacoes
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Bem vindo ao banco MoneySexo.");
+        System.out.println("Bem vindo ao banco MoneyJava.");
         while(true)
         {
             System.out.println("Deseja: \n[1] Cadastrar um novo cliente\n[2]Realizar uma transação\n[3]Encerrar o aplicativo.");
