@@ -1,27 +1,18 @@
 public class ContaBanco {
-    String conta, nomeCliente, sobrenomeCliente;
+    String nomeCliente, sobrenomeCliente;
     double saldo;
     int agencia = 3402;
-    private int numeroConta;
-    private int digitoConta;
+    int numeroConta;
     
     //métodos para criação de uma nova conta bancária
-    public ContaBanco(String nome, String sobrenome, int numero, int digito)
+    public ContaBanco(String nome, String sobrenome, int numero)
     {
         numeroConta = numero;
-        digitoConta = digito;
-        definirNumeroConta();
         nomeCliente = nome;
         sobrenomeCliente = sobrenome;
         saldo = 0;
 
-        System.out.println("\nConta aberta com sucesso!\nNome do cliente: " + nomeCliente + " " + sobrenomeCliente + "\nAgência: " + agencia + "\nNúmero da conta: " + conta + ".\nSaldo atual: " + saldo + "\n");
-    }
-
-    public String definirNumeroConta() 
-    {
-        conta = String.valueOf(numeroConta) + "-" + String.valueOf(digitoConta);
-        return conta;
+        System.out.println("\nConta aberta com sucesso!\nNome do cliente: " + nomeCliente + " " + sobrenomeCliente + "\nAgência: " + agencia + "\nNúmero da conta: " + numeroConta + ".\nSaldo atual: " + saldo + "\n");
     }
     
     //Transações
@@ -79,15 +70,5 @@ public class ContaBanco {
     public int getNumeroConta()
     {
         return numeroConta;
-    }
-
-    public int getDigitoConta()
-    {
-        return digitoConta;
-    }
-
-    public String getConta()
-    {
-        return conta;
     }
 }

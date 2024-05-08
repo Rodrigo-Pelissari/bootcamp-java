@@ -4,9 +4,9 @@ import java.util.ArrayList;
 public class Transacoes
 {
 	public static void main(String[] args) {
-	    int opcao, digito=1, numero=0;
+	    int opcao, numero=1;
         String primeiroNome, segundoNome;
-        int numeroConta, digitoConta;
+        int numeroConta;
         int valor;
         ArrayList<ContaBanco> clientes = new ArrayList<>();
 
@@ -25,26 +25,21 @@ public class Transacoes
                 System.out.println("Digite o sobrenome nome do cliente: ");
                 segundoNome = input.next();
 
-                if(digito > 9){
-                    digito = 1;
-                    numero++;
-                }
-                ContaBanco cliente = new ContaBanco(primeiroNome, segundoNome, numero, digito);
-                clientes.add(cliente); 
-                digito++;
+                ContaBanco conta = new ContaBanco(primeiroNome, segundoNome, numero);
+                numero++;
+                clientes.add(conta);
+                
 
             }else if(opcao == 2)
             {
                 while(true)
                 {
-                    System.out.println("Digite o número da sua conta.");
+                    System.out.println("Digite o número da sua conta (somente números).");
                     numeroConta = input.nextInt();
-                    System.out.println("Digite o dígito da sua conta.");
-                    digitoConta = input.nextInt();
 
-                    for(ContaBanco cliente : clientes)
+                    for(ContaBanco conta : clientes)
                     {
-                        if(cliente.getNumeroConta() == numeroConta && cliente.getDigitoConta() == digitoConta)
+                        if(conta.getNumeroConta() == numeroConta)
                         {
                             while(true)
                             {
@@ -56,20 +51,20 @@ public class Transacoes
                                     System.out.println("Opção inválida, digite novamente.");
                                 }else if(opcao == 1)
                                 {
-                                    cliente.checarSaldo();
+                                    conta.checarSaldo();
                                     break;
                                 }else if(opcao == 2)
                                 {
                                     System.out.println("Qual o valor do depósito?");
                                     valor = input.nextInt();
-                                    cliente.depositarValor(valor);
+                                    conta.depositarValor(valor);
                                     valor = 0;
                                     break;
                                 }else if(opcao == 3)
                                 {
                                     System.out.println("Qual o valor do saque?");
                                     valor = input.nextInt();
-                                    cliente.sacarValor(valor);
+                                    conta.sacarValor(valor);
                                     valor = 0;
                                     break;
                                 }else if(opcao == 4)
